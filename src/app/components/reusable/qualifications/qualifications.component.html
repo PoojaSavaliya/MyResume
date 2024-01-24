@@ -6,19 +6,19 @@
     </div>
     <div class="row align-items-center">
       <div class="col-md-6" *ngFor="let qualification of qualificationData">
-        <div [ngClass]="type == 'experience' ? 'exp-col' : 'edu-col'">
+        <div [ngClass]="type === 'experience' ? 'exp-col' : 'edu-col'">
           <span
             >{{ qualification.startDate }} <i>to</i>
             {{ qualification.endDate }}</span
           >
           <h3>
             {{
-              type == "experience"
+              type === "experience"
                 ? qualification.company
                 : qualification.degree
             }}
           </h3>
-          <ng-container *ngIf="type === 'Experience'">
+          <ng-container *ngIf="type === 'experience'">
             <h4>{{ qualification.location }}</h4>
             <h5>{{ qualification.position }}</h5>
           </ng-container>
