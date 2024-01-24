@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+/**********************************/
+/********** General CSS ***********/
+/**********************************/
+body {
+  color: #666666;
+  background: #f6d155;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #222222;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #ff6f61;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .wrapper .sidebar:hover .sidebar-header {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}

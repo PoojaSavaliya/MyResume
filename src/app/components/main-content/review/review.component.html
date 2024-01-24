@@ -1,0 +1,40 @@
+<!-- Review Start -->
+<div class="review" id="review">
+  <div class="content-inner">
+    <div class="content-header">
+      <h2>Review</h2>
+    </div>
+    <div class="row align-items-center">
+      <div
+        class="col-md-12"
+        *ngFor="let review of reviews; let i = index"
+        [ngClass]="i === activeReviewIndex ? 'd-block' : 'd-none'"
+        [@slideInOut]="i === activeReviewIndex ? 'in' : 'void'"
+      >
+        <div class="review-slider-item">
+          <div class="review-text">
+            <p>{{ review.text }}</p>
+          </div>
+          <div class="review-img">
+            <img [src]="review.image" alt="Image" />
+            <div class="review-name">
+              <h3>{{ review.name }}</h3>
+              <p>{{ review.profession }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <button class="btn mr-2 slick-prev" (click)="prevReview()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="btn slick-next" (click)="nextReview()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Review End -->

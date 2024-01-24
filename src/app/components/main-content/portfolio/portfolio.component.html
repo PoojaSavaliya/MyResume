@@ -1,0 +1,52 @@
+<section class="portfolio" id="portfolio">
+  <div class="content-inner">
+    <div class="content-header">
+      <h2>Portfolio</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul id="portfolio-filters">
+          <li
+            [class.filter-active]="filter === activeFilter"
+            *ngFor="let filter of portfolioFilters"
+            (click)="onFilterClick(filter)"
+          >
+            {{ filter }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row portfolio-container">
+      <div
+        *ngFor="let item of filteredPortfolio"
+        class="col-lg-4 col-md-6 portfolio-item"
+        [ngClass]="item.category"
+      >
+        <div class="portfolio-wrap">
+          <figure>
+            <img
+              [src]="item.imageUrl"
+              class="img-fluid"
+              alt="{{ item.title }}"
+            />
+            <a
+              [href]="item.previewUrl"
+              data-lightbox="portfolio"
+              data-title="{{ item.title }}"
+              class="link-preview"
+              title="Preview"
+            >
+              <i class="fa fa-eye"></i>
+            </a>
+            <a href="#" class="link-details" title="More Details">
+              <i class="fa fa-link"></i>
+            </a>
+            <a class="portfolio-title" href="#">
+              {{ item.title }} <span>{{ item.subtitle }}</span>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+/**********************************/
+/*********** Service CSS **********/
+/**********************************/
+.service {
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  background: #ffffff;
+  border-bottom: 30px solid #f6d155;
+}
+
+.service .srv-col {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.service .srv-col i {
+  font-size: 30px;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+.service .srv-col h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}

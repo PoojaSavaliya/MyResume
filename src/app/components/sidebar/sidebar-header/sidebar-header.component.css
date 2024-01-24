@@ -1,0 +1,21 @@
+.sidebar-header img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .sidebar-header {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar-header {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .sidebar-header {
+    display: none;
+  }
+}
